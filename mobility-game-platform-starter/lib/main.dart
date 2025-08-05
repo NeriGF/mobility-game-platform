@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'qr_scan_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +26,17 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Mobility Game")),
-      body: const Center(child: Text("Welcome to the Mobility Game Platform")),
-    );
+      body: Center(
+  child: ElevatedButton(
+    child: const Text("Scan QR Tag"),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => const QRScanScreen()),
+      );
+    },
+  ),
+),
+
   }
 }
