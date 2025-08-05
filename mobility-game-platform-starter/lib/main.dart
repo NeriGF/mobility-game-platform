@@ -1,27 +1,30 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MobilityApp());
+  runApp(const MyApp());
 }
 
-class MobilityApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mobility Game Platform',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomeScreen(),
+      home: const MyHomePage(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Mobility Game Platform")),
-      body: Center(child: Text("QR Scan + GPS Logic Goes Here")),
+      appBar: AppBar(title: const Text("Mobility Game")),
+      body: const Center(child: Text("Welcome to the Mobility Game Platform")),
     );
   }
 }
